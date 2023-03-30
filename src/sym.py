@@ -9,7 +9,7 @@ class Sym:
     def __init__(self, at = 0, txt = ""):
         self.at = at
         self.txt = txt
-
+        self.isSym = True
         self.n = 0
         self.has = {}
         self.most = 0
@@ -41,10 +41,11 @@ class Sym:
 
     ## div method returns the entropy 
     def div(self):
+        def fun(p):
+            return p*math.log(p,2)
         e = 0
-        for i in self.has:
-            p = self.has[i] / self.n
-            e = e + (p * math.log(p, 2))
+        for k, v in self.has.items():
+            e = e + fun(v/self.n)
         return -e
 
     def rnd(self, x, n):

@@ -1,0 +1,95 @@
+import sys
+sys.path.append("./src")
+import math
+import re, random
+from data import *
+
+def rnd(n, nPlaces = 3):
+    mult = math.pow(10, nPlaces)
+    return math.floor(n*mult + 0.5) / mult
+
+def o(t, isKeys=None):
+    return str(t)
+
+def rand(lo=0,hi=1):
+    lo = lo or 0
+    hi = hi or 1
+    Seed = (16807 * the["seed"]) % 2147483647
+    return lo + (hi-lo) * Seed / 2147483647
+
+def rint(lo,hi):
+    return math.floor(0.5 + rand(lo,hi))
+
+def any(t):
+    return random.choice(t)
+    
+def many(t,n):
+    u = []
+    for i in range(1, n + 1):
+        u.append(any(t))
+    return u
+
+def cosine(a, b, c):
+    x1 = (a**2 + c**2 - b**2) / (2*c)
+    x2 = max(0, min(1, x1))
+    y  = (a**2 - x2**2)**.5
+    return x2, y
+
+def per(t, p):
+    p = math.floor(((p or 0.5) * len(t)) + 0.5)
+    return t[max(1, min(len(t), p))]
+
+def kap(t, fun):
+    u = {}
+    for k,v in enumerate(t):
+        v,k = fun(k,v)
+        u[k or (1+len(u))] = v
+    
+    return u
+
+def map(t,fun):
+    u = {}
+    for k,v in enumerate(t):
+        v,k = fun(v)
+        print(v,k)
+        u[k or (1+len(u))] = v
+    return u
+
+def coerce(s): #Doubt
+    if s == "true":
+        return True
+    elif s == "false":
+        return False
+    elif re.search(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?$", s) is not None:
+        return float(s)
+    else:
+        return s
+    
+def oo(t):
+    print((o(t)))
+    return t
+
+def cliffs_delta(ns1, ns2):
+
+    if len(ns1) > 256:
+        ns1 = many(ns1, 256)
+    if len(ns2) > 256:
+        ns2 = many(ns2, 256)
+    if len(ns1) > 10 * len(ns2):
+        ns1 = many(ns1, 10 * len(ns2))
+    if len(ns2) > 10 * len(ns1):
+        ns2 = many(ns2, 10 * len(ns1))
+
+    n, gt, lt = 0, 0, 0
+    for x in ns1:
+        for y in ns2:
+            n += 1
+            if x > y:
+                gt += 1
+            if x < y:
+                lt += 1
+
+    return abs(lt - gt) / n > 0.147
+
+def diffs(nums1, nums2):
+    return kap(nums1, lambda k, nums: (cliffs_delta(nums.col.has, nums2[k].col.has), nums.col.txt))

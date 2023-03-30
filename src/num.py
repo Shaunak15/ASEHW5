@@ -1,7 +1,4 @@
 import math
-
-## Num class Summarizes a stram of numbers
-## Represents a column of character values
 class Num():
     
     ## constructor created for Num class
@@ -15,18 +12,15 @@ class Num():
 
         self.lo = float('inf')
         self.hi = float('-inf')
-
+        self.has =[]
         self.w = -1 if '-$' in txt else 1
 
-    def at(self) -> int:
+    def at(self):
         return self.at
 
-    def txt(self) -> str:
+    def txt(self):
         return self.txt
-
-    ## add method adds the n value also,
-    ## It upadtes the values of lo,hi d, mu,m2 which is used for,
-    ## calculating standard devaiation. 
+    
     def add(self, value):
         if value != '?':
             float_value = float(value)
@@ -37,12 +31,10 @@ class Num():
             self.lo = min(float_value, self.lo)
             self.hi = max(float_value, self.hi)
 
-    ## mid method return the mean. 
     def mid(self):
         return self.mu
 
-    # div method uses Welford's algorithmn to calculate standard deviation,
-    # here is the link for Welford's algorithmn http://t.ly/nn_W
+    #n; return standard deviation using Welford's algorithm 
     def div(self): 
         if((self.m2 < 0) or (self.n < 2)):
             return 0
