@@ -1,5 +1,5 @@
 import Query, utils
-from main import the
+from inputs import the
 from cluster import half
 
 def sway(data):

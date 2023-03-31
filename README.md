@@ -9,6 +9,13 @@ Automated Software Engineering - HW5
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Shaunak15/ASEHW5/unit_test.yml)
 ![github workflow](https://github.com/Shaunak15/ASEHW5/actions/workflows/unit_test.yml/badge.svg)
 
+
+# How to Run??
+1. go to src/ directory and then python3 main.py -g
+2. To run the tests run pytest tests.py from src directory
+
+The tests.out file is stored inside the etc/out/ directory
+
 # Team Member
 
 1. Het Patel (hpatel28)

@@ -5,12 +5,10 @@ from num import Num
 from sym import Sym
 import utils
 from data import *
-from main import *
 from pathlib import Path
 import os,math 
 import optimize 
-import Query 
-import Range 
+import Query
 import update 
 import cluster
 import Discretization 
@@ -52,7 +50,7 @@ def test_nums():
     print("test_nums: PASS\n")
     return 11/7 == val.mid() and 0.787 == utils.rnd(val.div(),3)
     
-def test_syms():
+def test_sym():
     value = ['a', 'a', 'a', 'a', 'b', 'b', 'c']
     sym1 = Sym()
     for x in value:
@@ -74,9 +72,6 @@ def test_data():
     print(col.lo,col.hi, Query.mid(col), Query.div(col))
     print(Query.stats(data))
     return True
-
-
-
 
 def test_clone():
     csv_path = "../etc/data/auto93.csv"
@@ -138,7 +133,6 @@ def test_tree():
     cluster.show_tree(cluster.tree(data))
 
     return True
-
 
 def test_sway():
   

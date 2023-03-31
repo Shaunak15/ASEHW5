@@ -3,8 +3,7 @@ sys.path.append("./src")
 from typing import List
 import csv
 import copy as copy
-import tests
-from main import the
+from inputs import the
 import update
 
 def csv_content(src):
@@ -15,6 +14,12 @@ def csv_content(src):
             res.append(row)
     return res
 
+def readCSV(sFilename, fun):
+  
+    with open(sFilename, mode='r') as file:
+        csvFile = csv.reader(file)
+        for line in csvFile:
+            fun(line)
 class Data():
     
 
@@ -23,11 +28,12 @@ class Data():
         self.cols = None
         self.rows = []
 
+   
 
     def read_file(self, content):
         data = Data()
         callback_function = lambda t: update.row(data, t)
-        tests.readCSV(content, callback_function)
+        readCSV(content, callback_function)
         return data
 
     def clone(self, data, ts=None):

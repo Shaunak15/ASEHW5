@@ -12,7 +12,7 @@ def run_tests():
 
     passCount = 0
     failCount = 0
-    test_suite = [test_nums, test_sym, test_the,  test_half, test_csv, test_data,  test_clone, test_cliffs, test_tree,  test_dist, test_csv, test_sway, test_bins]
+    test_suite = [test_nums, test_sym, test_the,  test_half, test_csv, test_data,  test_clone, test_cliffs, test_tree,  test_dist, test_sway, test_bins]
     
     for test in test_suite:
         try:

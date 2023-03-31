@@ -1,9 +1,7 @@
 from col import COL
 from Query import *
-
 from data import *
 import update as upd
-
 import math
 from copy import deepcopy
 from Range import *

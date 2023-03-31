@@ -1,5 +1,5 @@
 import Query
-from main import the
+from inputs import the
 from data import Data
 import utils
 

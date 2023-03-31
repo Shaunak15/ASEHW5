@@ -1,24 +1,124 @@
-============================= test session starts =============================
-platform win32 -- Python 3.10.2, pytest-7.2.1, pluggy-1.0.0
-rootdir: D:\Documents\ASE_HW2\tests
-collected 5 items
+==================================================================== test session starts ====================================================================
+platform linux -- Python 3.8.10, pytest-7.2.2, pluggy-1.0.0
+rootdir: /home/het0199/Documents/NCSU_SEM-4/ASE/ASEHW5/src
+collected 12 items                                                                                                                                          
 
-tests.py 
-test_csv: PASS
-.
-test_show_dump: PASS
-.
-test_syms: PASS
-.
+tests.py ............   
+
+Executing tests...
+
 test_nums: PASS
-.
 
-test_data: PASS
+test_syms: PASS
 
-y	mid	{ :Lbs- 2970.42 :Acc+ 15.57 :Mpg+ 23.84}
- 	div	{ :Lbs- 846.84 :Acc+ 2.76 :Mpg+ 8.34}
-x	mid	{ :Clndrs 5.45 :Volume 193.43 :Model 76.01 :origin 1}
- 	div	{ :Clndrs 1.7 :Volume 104.27 :Model 3.7 :origin 1.3273558482394003}
-.
+The results of test_the function:
+{'seed': 937162211, 'dump': False, 'halves': '', 'reuse': True, 'go': 'data', 'help': False, 'file': '/etc/data/repgrid3.csv', 'min': 0.5, 'rest': 4}
+test_the: PASS
 
-============================== 5 passed in 0.02s ==============================
+Half Called
+Test half : successful 
+
+200 198 398
+['4', '119', '97', '2545', '17', '75', '3', '20'] 0.7547068461323305
+['8', '400', '170', '4746', '12', '71', '1', '10']
+ Test csv : successful 
+
+Test data : successful 
+
+68.0 455.0 120.0 -98.06201550387597
+({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35d004280>)
+Test clone : successful 
+
+({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35ccf5100>)
+({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35ccf50a0>)
+> 1.0 False
+> 1.025 True
+Test cliff : successful 
+
+Test tree : successful 
+
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+[398]({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35cc44100>)
+|.. [200]
+|.. |.. [101]
+|.. |.. |.. [51]
+|.. |.. |.. |.. [26]({'Lbs-': 2800.0, 'Acc+': 14.4, 'Mpg+': 30.0, 'N': 26}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [25]({'Lbs-': 2592.0, 'Acc+': 18.5, 'Mpg+': 20.0, 'N': 25}, <map object at 0x7fd35cc44100>)
+|.. |.. |.. [50]
+|.. |.. |.. |.. [26]({'Lbs-': 1965.0, 'Acc+': 15.7, 'Mpg+': 30.0, 'N': 26}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [24]({'Lbs-': 2395.0, 'Acc+': 18.0, 'Mpg+': 30.0, 'N': 24}, <map object at 0x7fd35cc44100>)
+|.. |.. [99]
+|.. |.. |.. [50]
+|.. |.. |.. |.. [26]({'Lbs-': 1950.0, 'Acc+': 21.0, 'Mpg+': 30.0, 'N': 26}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [24]({'Lbs-': 2830.0, 'Acc+': 15.9, 'Mpg+': 20.0, 'N': 24}, <map object at 0x7fd35cc44100>)
+|.. |.. |.. [49]
+|.. |.. |.. |.. [25]({'Lbs-': 2003.0, 'Acc+': 19.0, 'Mpg+': 30.0, 'N': 25}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [24]({'Lbs-': 1975.0, 'Acc+': 15.2, 'Mpg+': 30.0, 'N': 24}, <map object at 0x7fd35cc44100>)
+|.. [198]
+|.. |.. [100]
+|.. |.. |.. [51]
+|.. |.. |.. |.. [26]({'Lbs-': 4746.0, 'Acc+': 12.0, 'Mpg+': 10.0, 'N': 26}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [25]({'Lbs-': 4100.0, 'Acc+': 13.0, 'Mpg+': 10.0, 'N': 25}, <map object at 0x7fd35cc44100>)
+|.. |.. |.. [49]
+|.. |.. |.. |.. [25]({'Lbs-': 3278.0, 'Acc+': 18.0, 'Mpg+': 20.0, 'N': 25}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [24]({'Lbs-': 4498.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 24}, <map object at 0x7fd35cc44100>)
+|.. |.. [98]
+|.. |.. |.. [50]
+|.. |.. |.. |.. [26]({'Lbs-': 3415.0, 'Acc+': 15.8, 'Mpg+': 20.0, 'N': 26}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [24]({'Lbs-': 3205.0, 'Acc+': 11.2, 'Mpg+': 20.0, 'N': 24}, <map object at 0x7fd35cc44100>)
+|.. |.. |.. [48]
+|.. |.. |.. |.. [25]({'Lbs-': 2408.0, 'Acc+': 19.0, 'Mpg+': 20.0, 'N': 25}, <map object at 0x7fd35cc440a0>)
+|.. |.. |.. |.. [23]({'Lbs-': 3897.0, 'Acc+': 18.5, 'Mpg+': 20.0, 'N': 23}, <map object at 0x7fd35cc44100>)
+Test dist : successful 
+
+{'lo': 0.0, 'hi': 0.9022161422721422, 'mid': 0.716, 'div': 398.0}
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Inside if
+({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35cd136a0>)
+
+all  ({'Lbs-': 2506.0, 'Acc+': 14.5, 'Mpg+': 20.0, 'N': 398}, <map object at 0x7fd35cd13190>)
+     ({'Lbs-': -817.4, 'Acc+': 1.0, 'Mpg+': 7.8, 'N': 398}, <map object at 0x7fd35cd136a0>)
+
+best ({'Lbs-': 3381.0, 'Acc+': 18.7, 'Mpg+': 20.0, 'N': 13}, <map object at 0x7fd35cd13190>)
+     ({'Lbs-': -52.3, 'Acc+': -0.7, 'Mpg+': 3.9, 'N': 13}, <map object at 0x7fd35cd136a0>)
+
+rest ({'Lbs-': 2962.0, 'Acc+': 13.5, 'Mpg+': 20.0, 'N': 52}, <map object at 0x7fd35cd13190>)
+     ({'Lbs-': 374.0, 'Acc+': -1.7, 'Mpg+': -3.9, 'N': 52}, <map object at 0x7fd35cd136a0>)
+
+all ~= best? {'Lbs-': True, 'Acc+': False, 'Mpg+': False}
+best ~= rest? {'Lbs-': True, 'Acc+': True, 'Mpg+': True}
+Half Called
+Half Called
+Half Called
+Half Called
+Half Called
+Inside if
+Test bin : successful
+all    {'best': 13, 'rest': 52}
+end
+
+Passing: 12
+Failing: 0
+
+
+
+
+============================================================== 12 passed, 12 warnings in 0.42s ==============================================================
